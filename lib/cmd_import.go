@@ -525,7 +525,7 @@ func DecimalStrToIP(decimal string) (net.IP, error) {
 		copy(ip[16-len(b):], b)
 		return ip, nil
 	}
-	return nil, errors.New("invalid input: invalid input: decimal value out of range for both IPv4 and IPv6")
+	return nil, errors.New("invalid input: decimal value out of range for both IPv4 and IPv6")
 }
 
 func AppendCSVRecord(f CmdImportFlags, dataColStart int, delim rune, parts []string, tree *mmdbwriter.Tree) error {
